@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="ContactsAppMvc20200616121103" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Sarah\ Osborne\\Documents\\AngularProjectFinal\\ContactsAppMvc\\ContactsAppMvc\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Sarah\ Osborne\\Documents\\AngularProjectFinal\\ContactsAppMvc\\ContactsAppMvc\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="ContactsAppMvcDbContext-Web.config Connection String" description="ContactsAppMvcDbContext Connection String used in web.config by the application to access the database." value="Data Source=tcp:contactsappmvcdbserver.database.windows.net,1433;Initial Catalog=ContactsAppMvc_db;User Id=@contactsappmvcdbserver;Password=" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Sarah\ Osborne\\Documents\\AngularProjectFinal\\ContactsAppMvc\\ContactsAppMvc\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ContactsAppMvcDbContext']/@connectionString" />
+  </parameter>
+</parameters>

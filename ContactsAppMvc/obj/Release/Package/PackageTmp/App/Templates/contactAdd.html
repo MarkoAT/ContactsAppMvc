@@ -1,0 +1,58 @@
+﻿<h2>New</h2>
+<form class="form-horizontal" name="contactAddForm" ng-submit="createContact(contact)" novalidate>
+    <h4>Create a new contact</h4>
+    <hr />
+
+    <div class="form-group">
+        <label class="col-lg-2 control-label">Name</label>
+        <div class="col-lg-10">
+            <input type="text" class="form-control" name="name" ng-model="contact.Name" ng-maxlength="32" required />
+            <span class="required-label">Required</span>
+            <span class="text-error" ng-show="(contactAddForm.name.$touched || contactAddForm.name.$dirty) && contactAddForm.name.$invalid">
+                <span ng-show="contactAddForm.name.$error.required">Name is required</span>
+                <span ng-show="contactAddForm.name.$error.maxlength">Name must be 32 characters or less</span>
+            </span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg-2 control-label">Email</label>
+        <div class="col-lg-10">
+            <input type="email" class="form-control" name="mail" ng-model="contact.Email" ng-maxlength="50" required />
+            <span class="required-label">Required</span>
+            <span class="text-error" ng-show="(contactAddForm.mail.$touched || contactAddForm.mail.$dirty) && contactAddForm.mail.$invalid">
+                <span ng-show="contactAddForm.mail.$error.required">Email is required</span>
+                <span ng-show="contactAddForm.mail.$error.email">Invalid email address</span>
+                <span ng-show="contactAddForm.mail.$error.maxlength">Email must be 50 characters or less</span>
+            </span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg-2 control-label">Location</label>
+        <div class="col-lg-10">
+            <select id="countries" class="form-control" name="location" ng-model="contact.Location">
+                <option value="Finland">Finland</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="United States">United States</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg-2 control-label">Phone</label>
+        <div class="col-lg-10">
+            <input type="text" class="form-control" name="phone" ng-model="contact.Phone" ng-maxlength="32" />
+            <span class="text-error" ng-show="(contactAddForm.phone.$touched || contactAddForm.phone.$dirty) && contactAddForm.phone.$invalid">
+                <span ng-show="contactAddForm.phone.$error.maxlength">Phone must be 32 characters or less</span>
+            </span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-lg-offset-2 col-lg-10">
+            <input type="submit" class="btn btn-success" value="Create" ng-disabled="frmAddUser.$invalid" />
+            <a href="#/" class="btn btn-default">Cancel</a>
+        </div>
+    </div>
+</form>

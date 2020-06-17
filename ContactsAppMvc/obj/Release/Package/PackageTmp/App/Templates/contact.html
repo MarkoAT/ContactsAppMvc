@@ -1,0 +1,36 @@
+﻿<h2></h2>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <p style="font-size:30px">Contact list</p>
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Location</th>
+                    <th>Phone</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="i in contacts">
+                    <td>{{ i.Name }}</td>
+                    <td>{{ i.Email }}</td>
+                    <td>{{ i.Location }}</td>
+                    <td>{{ i.Phone }}</td>
+                    <td>
+                        <a href="#/editcontact/{{i.Id}}">Edit</a> | <a href="" ng-click="deleteContact(i.Id)">Delete</a>
+                    </td>
+                </tr>
+                <tr ng-if="!contacts || contacts.length == 0">
+                    <td colspan="5" style="text-align: center">
+                        <p id="loadingMessage" onload="dataLoaded()">Loading contacts...</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#/addcontact" class="btn btn-primary">Create new contact</a>
+    </div>
+</div>
