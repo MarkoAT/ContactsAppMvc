@@ -4,10 +4,10 @@
 ASP.NET MVC web app using AngularJS for Net Natives
 
 Uses:
->AngularJS.Core v1.7.9
->AngularJS.Route v1.7.9
->EntityFramework v6.4.4
->toastr v2.1.1
+-AngularJS.Core v1.7.9
+-AngularJS.Route v1.7.9
+-EntityFramework v6.4.4
+-toastr v2.1.1
 
 ## Web Demo
 
